@@ -1,0 +1,17 @@
+{
+  "name": "worker_test",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo \"serve ./proxy -l 3001\" AND \"serve ./ -l 3000\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codesandbox-app/static-template.git"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

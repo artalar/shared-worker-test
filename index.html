@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <p><button id="btn"></button></p>
+    <iframe
+      src="http://localhost:3001/"
+      style="width: 80vw; height: 80vh"
+    ></iframe>
+    <script>
+      const worker = new SharedWorker(`worker.js`);
+
+      btn.onclick = () => worker.port.postMessage(1);
+
+      worker.port.onmessage = (event) => {
+        btn.textContent = event.data;
+      };
+
+      worker.port.postMessage(0);
+    </script>
+  </body>
+</html>
